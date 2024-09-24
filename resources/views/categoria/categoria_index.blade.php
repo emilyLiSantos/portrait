@@ -27,7 +27,7 @@
                             <tr>
                             <th>ID</th>
                             <th>Nome</th>
-                            <th>Descriçao</th>
+                            <th>Descrição</th>
                             <th>Ações</th>
                             </tr>
 
