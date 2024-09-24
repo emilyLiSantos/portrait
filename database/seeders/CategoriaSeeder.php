@@ -15,17 +15,17 @@ class CategoriaSeeder extends Seeder
     {
         DB::table('categorias')->insert([
             'nome'=> 'Natureza',
-            'descricao'=>'descricao 1'
+            'descricao'=>'descricao 1',
         ]);
 
         DB::table('categorias')->insert([
             'nome'=> 'Comida',
-            'descricao'=>'descricao 2'
+            'descricao'=>'descricao 2',
         ]);
 
         DB::table('categorias')->insert([
             'nome'=> 'Filmes',
-            'descricao'=>'descricao 3'
+            'descricao'=>'descricao 3',
         ]);
     }
 }

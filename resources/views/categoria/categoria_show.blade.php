@@ -9,6 +9,7 @@
 
                 <div class="card-body">
                     <p><strong>Nome:</strong> {{ $categoria->nome }}</p>
+                    <p><strong>Descriçao:</strong> {{ $categoria->descricao }}</p>
                     <p><strong>Criação:</strong> {{ $categoria->created_at }}</p>
                 </div>
 
