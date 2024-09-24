@@ -31,10 +31,12 @@ class CategoriaController extends Controller
     {
        $validated = $request->validate([
             'nome' => 'required|min:5',
+            'descricao' => 'required|min:5',
        ]);
 
        $categoria = new Categoria();
        $categoria->nome = $request->nome;
+       $categoria->descricao = $request->descricao;
        $categoria->save();
 
        //dd($request->all());
@@ -73,6 +75,7 @@ class CategoriaController extends Controller
 
         $categoria = Categoria::find($id);
         $categoria->nome = $request->nome;
+        $categoria->descricao = $request->descricao;
         $categoria->save();
 
         return redirect()->route('categoria.index')->with('mensagem', 'Categoria alterada com sucesso');

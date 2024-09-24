@@ -17,6 +17,9 @@
                             <div class="form-group">
                                 <label for="formGroupExampleInput" class="form-label">Nome da categoria:</label>
                                 <input type="text" name="nome" value="{{ $categoria->nome }}" class="form-control" id="formGroupExampleInput" placeholder="">
+
+                                <label for="formGroupExampleInput" class="form-label">Descrição:</label>
+                                <input type="text" name="descricao" value="{{ $categoria->descricao }}" class="form-control" id="formGroupExampleInput" placeholder="">
                             </div>
                             <input class="btn btn-success" type="submit" value="Enviar">
 
