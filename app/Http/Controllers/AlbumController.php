@@ -13,8 +13,9 @@ class AlbumController extends Controller
     public function index()
     {
         $albuns = Album::orderBy('nome', 'ASC')->get();
-        dd($albuns);
-        //dd('aa');
+        //dd($albuns);
+        return view('album.album_index', compact('albuns'));
+
     }
 
     /**
