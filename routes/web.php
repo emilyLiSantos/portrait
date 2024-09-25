@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\AlbumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,28 @@ Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name(
 
 
 //Fim da Categoria
+
+// COMEÇO DO ALBUM
+
+
+Route::get('/album', [AlbumController::class, 'index'])->name('album.index');
+
+//Route::get('/album/create', [CategoriaController::class, 'create'])->name('album.create');
+
+//Route::post('/album', [CategoriaController::class, 'store'])->name('album.store');
+
+//Route::get('/album/{id}', [CategoriaController::class, 'show'])->name('album.show');
+
+//Route::get('/album/{id}/edit', [CategoriaController::class, 'edit'])->name('album.edit');
+
+//Route::put('/album/{id}', [CategoriaController::class, 'update'])->name('album.update');
+
+///Route::delete('/album/{id}', [CategoriaController::class, 'destroy'])->name('album.destroy');
+
+
+
+
+
+
+
+// FIM DO ALBUM
