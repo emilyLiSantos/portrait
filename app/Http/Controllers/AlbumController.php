@@ -12,7 +12,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        $albuns = Album::orderBy('nome', 'ASC')->get();
+        $Albuns = Album::orderBy('nome', 'ASC')->get();
         //dd($albuns);
         return view('album.album_index', compact('albuns'));
 
@@ -39,7 +39,7 @@ class AlbumController extends Controller
      */
     public function show(string $id)
     {
-        dd("aa");
+       //
     }
 
     /**
