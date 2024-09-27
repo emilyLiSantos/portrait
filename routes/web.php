@@ -22,48 +22,37 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware(['auth'])->group(function () {
 
-// Começo Categoria
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
+    // Começo Categoria
 
-Route::get('/categoria/create', [CategoriaController::class, 'create'])->name('categoria.create');
+    Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
 
-Route::post('/categoria', [CategoriaController::class, 'store'])->name('categoria.store');
+    Route::get('/categoria/create', [CategoriaController::class, 'create'])->name('categoria.create');
 
-Route::get('/categoria/{id}', [CategoriaController::class, 'show'])->name('categoria.show');
+    Route::post('/categoria', [CategoriaController::class, 'store'])->name('categoria.store');
 
-Route::get('/categoria/{id}/edit', [CategoriaController::class, 'edit'])->name('categoria.edit');
+    Route::get('/categoria/{id}', [CategoriaController::class, 'show'])->name('categoria.show');
 
-Route::put('/categoria/{id}', [CategoriaController::class, 'update'])->name('categoria.update');
+    Route::get('/categoria/{id}/edit', [CategoriaController::class, 'edit'])->name('categoria.edit');
 
-Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name('categoria.destroy');
+    Route::put('/categoria/{id}', [CategoriaController::class, 'update'])->name('categoria.update');
 
-
-//Fim da Categoria
-
-// COMEÇO DO ALBUM
+    Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name('categoria.destroy');
 
 
-Route::get('/album', [AlbumController::class, 'index'])->name('album.index');
+    //Fim da Categoria
 
-//Route::get('/album/create', [CategoriaController::class, 'create'])->name('album.create');
+    // COMEÇO DO ALBUM
 
-//Route::post('/album', [CategoriaController::class, 'store'])->name('album.store');
 
-//Route::get('/album/{id}', [CategoriaController::class, 'show'])->name('album.show');
-
-//Route::get('/album/{id}/edit', [CategoriaController::class, 'edit'])->name('album.edit');
-
-//Route::put('/album/{id}', [CategoriaController::class, 'update'])->name('album.update');
-
-///Route::delete('/album/{id}', [CategoriaController::class, 'destroy'])->name('album.destroy');
+    Route::get('/album', [AlbumController::class, 'index'])->name('album.index');
 
 
 
 
+    // FIM DO ALBUM
+});
 
-
-
-// FIM DO ALBUM

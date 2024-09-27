@@ -19,7 +19,9 @@
                     <tr>
                       <td>{{ $value -> id}}</td>
                       <td>{{ $value -> nome}}</td>
-                      <td></td>
+                      <td>
+                        <a href="#" class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
+                      </td>
                     </tr>
                    @endforeach
                   </table>
