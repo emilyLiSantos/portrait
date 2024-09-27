@@ -14,7 +14,7 @@ class AlbumController extends Controller
     {
         $Albuns = Album::orderBy('nome', 'ASC')->get();
         //dd($albuns);
-        return view('album.album_index', compact('albuns'));
+        return view('Album.Album_index', compact('albuns'));
 
     }
 
