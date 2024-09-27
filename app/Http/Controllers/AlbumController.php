@@ -39,7 +39,7 @@ class AlbumController extends Controller
      */
     public function show(string $id)
     {
-        //
+        dd("aa");
     }
 
     /**
