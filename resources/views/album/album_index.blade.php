@@ -20,7 +20,7 @@
                       <td>{{ $value -> id}}</td>
                       <td>{{ $value -> nome}}</td>
                       <td>
-                        <a href="{{url('/album' .$value->id)}}" class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
+                        <a class="btn btn-primary" href="{{ url('/album' .$value->id) }}" role="button" aria-disabled="true">Visualizar</a>
 
                       </td>
                     </tr>
