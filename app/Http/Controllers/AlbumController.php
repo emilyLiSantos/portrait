@@ -39,7 +39,9 @@ class AlbumController extends Controller
      */
     public function show(string $id)
     {
-       //
+       //dd('show: ' . $id);
+       $album = Album::find($id);
+       return view('album.album_show', compact('album'));
     }
 
     /**

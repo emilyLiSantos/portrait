@@ -19,8 +19,9 @@
                     <tr>
                       <td>{{ $value -> id}}</td>
                       <td>{{ $value -> nome}}</td>
+                      <td>{{ $value -> descricao}}</td>
                       <td>
-                        <a class="btn btn-primary" href="{{ url('/album' .$value->id) }}" role="button" aria-disabled="true">Visualizar</a>
+                        <a href="{{ url('/album/' .$value->id) }}" class="btn btn-primary"  role="button" aria-disabled="true">Visualizar</a>
 
                       </td>
                     </tr>
