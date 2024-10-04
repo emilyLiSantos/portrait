@@ -23,7 +23,7 @@ class AlbumController extends Controller
      */
     public function create()
     {
-        //
+        return view('album.album_create');
     }
 
     /**
@@ -31,7 +31,16 @@ class AlbumController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'nome' => 'required|min:5',
+            'descricao' => 'required|min:5',
+        ]);
+         $album = new album();
+         $album->nome = $request->nome;
+         $album->descricao = $request->descricao;
+         $album->save();
+
+        dd($request->all());
     }
 
     /**

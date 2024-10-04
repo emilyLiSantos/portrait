@@ -50,7 +50,13 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/album', [AlbumController::class, 'index'])->name('album.index');
 
+    Route::get('/album/create', [AlbumController::class, 'create'])->name('album.create');
+
+    Route::post('/album', [AlbumController::class, 'store'])->name('album.store');
+
     Route::get('/album/{id}', [AlbumController::class, 'show'])->name('album.show');
+
+
 
 
 

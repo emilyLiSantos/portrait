@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
+                <a href="{{ url('/album/create') }}" class="btn btn-success"  role="button" aria-disabled="true">Criar</a>
                 <table>
 
                     <tr>
