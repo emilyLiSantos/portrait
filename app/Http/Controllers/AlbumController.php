@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Album;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AlbumController extends Controller
 {
@@ -38,9 +39,12 @@ class AlbumController extends Controller
          $album = new album();
          $album->nome = $request->nome;
          $album->descricao = $request->descricao;
+         $album->user_id = Auth::id();
          $album->save();
 
-        dd($request->all());
+        //dd($request->all());
+
+        return redirect()->route('album.index')->with('mensagem', 'Album cadastrado com sucesso');
     }
 
     /**

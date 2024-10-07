@@ -1,22 +1,21 @@
+
 @extends('adminlte::page')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="margin:15px">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <p><srong>Nome: </strong>{{ $album->nome}}<p>
-                <p><srong>Descrição: </strong>{{ $album->descricao}}<p>
-                <p><srong>Criação: </strong>{{ $album->created_at }}<p>
-
-
+                <div class="card-body">
+                    <p><strong>Nome:</strong> {{ $album->nome }}</p>
+                    <p><strong>Descriçao:</strong> {{ $album->descricao }}</p>
+                    <p><strong>Criação:</strong> {{ $album->created_at }}</p>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
 @endsection
-
-

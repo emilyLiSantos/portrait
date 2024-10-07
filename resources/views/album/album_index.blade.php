@@ -8,6 +8,14 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <a href="{{ url('/album/create') }}" class="btn btn-success"  role="button" aria-disabled="true">Criar</a>
+                <br>
+                @if (session('mensagem'))
+                    <div class="alert alert-success">
+                        {{ session('mensagem') }}
+                    </div>
+                @endif
+
+
                 <table>
 
                     <tr>
@@ -27,14 +35,13 @@
                       </td>
                     </tr>
                    @endforeach
-                  </table>
+                </table>
 
-
-                </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection
 
 

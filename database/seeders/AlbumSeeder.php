@@ -14,22 +14,22 @@ class AlbumSeeder extends Seeder
     public function run(): void
     {
         DB::table('albuns')->insert([
+            'user_id' => 1,
             'nome' => 'Titulo',
             'descricao' => 'descrição 1',
         ]);
 
         DB::table('albuns')->insert([
+            'user_id' => 1,
             'nome' => 'Tag',
             'descricao' => 'descrição 2'
         ]);
 
         DB::table('albuns')->insert([
+            'user_id' => 1,
             'nome' => 'fotos',
             'descricao' => 'descrição 3'
         ]);
-        DB::table('albuns')->insert([
-            'nome' => 'Ana',
-            'descricao' => 'descrição 4'
-        ]);
+        
     }
 }
