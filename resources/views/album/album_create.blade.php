@@ -23,7 +23,7 @@
                     <form method='POST' action="{{ URL('/album') }}" style="margin: 15px">
                         @csrf
                             <div class="form-group">
-                                <label for="formGroupExampleInput" class="form-label">Nome da categoria:</label>
+                                <label for="formGroupExampleInput" class="form-label">Nome do album:</label>
                                 <input type="text" name="nome" class="form-control" id="formGroupExampleInput" placeholder="">
 
                                 <label for="formGroupExampleInput" class="form-label">Descrição:</label>

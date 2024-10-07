@@ -22,6 +22,7 @@
 
                     <form method='POST' action="{{ URL('/categoria') }}" style="margin: 15px">
                         @csrf
+
                             <div class="form-group">
                                 <label for="formGroupExampleInput" class="form-label">Nome da categoria:</label>
                                 <input type="text" name="nome" class="form-control" id="formGroupExampleInput" placeholder="">

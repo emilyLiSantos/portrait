@@ -62,7 +62,8 @@ class AlbumController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $album = Album::find($id);
+        return view('album.album_edit', compact('album'));
     }
 
     /**
@@ -70,7 +71,19 @@ class AlbumController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'nome' => 'required|min:5',
+            'descricao' => 'required|min:5',
+        ]);
+         $album = new album();
+         $album->nome = $request->nome;
+         $album->descricao = $request->descricao;
+         $album->user_id = Auth::id();
+         $album->save();
+
+        //dd($request->all());
+
+        return redirect()->route('album.index')->with('mensagem', 'Album alterado com sucesso');
     }
 
     /**
@@ -78,6 +91,9 @@ class AlbumController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $album = Album::find($id);
+        $album->delete();
+
+        return redirect()->route('album.index')->with('mensagem', 'Album excluído com sucesso');
     }
 }

@@ -56,9 +56,11 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/album/{id}', [AlbumController::class, 'show'])->name('album.show');
 
+    Route::get('/album/{id}/edit', [AlbumController::class, 'edit'])->name('album.edit');
 
+    Route::put('/album/{id}', [AlbumController::class, 'update'])->name('album.update');
 
-
+    Route::delete('/album/{id}', [AlbumController::class, 'destroy'])->name('album.destroy');
 
     // FIM DO ALBUM
 });
