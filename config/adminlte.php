@@ -329,6 +329,11 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            'text' => 'Postagem',
+            'url' => 'postagem',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
             'text' => 'Album',
             'url' => 'album',
             'icon' => 'fas fa-fw fa-user',

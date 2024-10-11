@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\PostagemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,5 +64,24 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/album/{id}', [AlbumController::class, 'destroy'])->name('album.destroy');
 
     // FIM DO ALBUM
+
+     // COMEÇO DO postagem
+
+
+     Route::get('/postagem', [PostagemController::class, 'index'])->name('postagem.index');
+
+     Route::get('/postagem/create', [PostagemController::class, 'create'])->name('postagem.create');
+
+     Route::post('/postagem', [PostagemController::class, 'store'])->name('postagem.store');
+
+     Route::get('/postagem/{id}', [PostagemController::class, 'show'])->name('postagem.show');
+
+     Route::get('/postagem/{id}/edit', [PostagemController::class, 'edit'])->name('postagem.edit');
+
+     Route::put('/postagem/{id}', [PostagemController::class, 'update'])->name('postagem.update');
+
+     Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'])->name('postagem.destroy');
+
+     // FIM DO ALBUM
 });
 
