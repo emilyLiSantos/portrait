@@ -14,12 +14,14 @@
                         @method('PUT')
                         @csrf
 
+
                         <div class="form-group">
                             <label for="formGroupExampleInput" class="form-label">Título da Postagem:</label>
-                            <input type="text" name="nome" value="{{ $postagem->nome }}"  class="form-control" id="formGroupExampleInput" placeholder="">
+                            <input type="text" name="nome" value="{{ $postagem->titulo }}"  class="form-control" id="formGroupExampleInput" placeholder="">
+
 
                             <label for="formGroupExampleInput" class="form-label">Conteúdo:</label>
-                            <input type="text" name="conteudo" value="{{ $postagem->descricao }}" class="form-control" id="formGroupExampleInput" placeholder="">
+                            <input type="text" name="conteudo" value="{{ $postagem->conteudo }}" class="form-control" id="formGroupExampleInput" placeholder="">
                          </div>
 
                         <input class="btn btn-success" type="submit" value="Enviar">

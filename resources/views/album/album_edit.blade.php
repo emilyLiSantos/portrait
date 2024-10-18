@@ -16,7 +16,7 @@
 
                         <div class="form-group">
                             <label for="formGroupExampleInput" class="form-label">Nome do album:</label>
-                            <input type="text" name="nome" value="{{ $album->nome }}"  class="form-control" id="formGroupExampleInput" placeholder="">
+                            <input type="text" name="nome" value="{{ $album->titulo }}"  class="form-control" id="formGroupExampleInput" placeholder="">
 
                             <label for="formGroupExampleInput" class="form-label">Descrição:</label>
                             <input type="text" name="descricao" value="{{ $album->descricao }}" class="form-control" id="formGroupExampleInput" placeholder="">
