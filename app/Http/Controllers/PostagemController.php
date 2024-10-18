@@ -13,7 +13,7 @@ class PostagemController extends Controller
      */
     public function index()
     {
-        $postagens = Postagem::orderBy('nome', 'ASC')->get();
+        $postagens = Postagem::orderBy('titulo', 'ASC')->get();
         return view('postagem.postagem_index', compact('postagens'));
     }
 
@@ -31,12 +31,12 @@ class PostagemController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([
-            'nome' => 'required|min:5',
+            'titulo' => 'required|min:5',
             'descricao' => 'required|min:5',
        ]);
 
        $postagem = new postagem();
-       $postagem->nome = $request->nome;
+       $postagem->titulo = $request->titulo;
        $postagem->descricao = $request->descricao;
        $postagem->save();
 
@@ -75,7 +75,7 @@ class PostagemController extends Controller
        ]);
 
         $postagem = postagem::find($id);
-        $postagem->nome = $request->nome;
+        $postagem->titulo = $request->titulo;
         $postagem->descricao = $request->descricao;
         $postagem->save();
 

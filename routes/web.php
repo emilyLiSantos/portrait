@@ -65,8 +65,7 @@ Route::middleware(['auth'])->group(function () {
 
     // FIM DO ALBUM
 
-     // COMEÇO DO postagem
-
+    // COMEÇO DO postagem
 
      Route::get('/postagem', [PostagemController::class, 'index'])->name('postagem.index');
 
@@ -82,6 +81,6 @@ Route::middleware(['auth'])->group(function () {
 
      Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'])->name('postagem.destroy');
 
-     // FIM DO ALBUM
+    // FIM DO ALBUM
 });
 
