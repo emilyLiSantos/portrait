@@ -20,14 +20,14 @@
                             </div>
                     @endif
 
-                    <form method='POST' action="{{ URL('/album') }}" style="margin: 15px">
+                    <form method='POST' action="{{ URL('/postagem') }}" style="margin: 15px">
                         @csrf
                             <div class="form-group">
-                                <label for="formGroupExampleInput" class="form-label">Título da Postagem</label>
+                                <label for="formGroupExampleInput" class="form-label">Nome do album:</label>
                                 <input type="text" name="nome" class="form-control" id="formGroupExampleInput" placeholder="">
 
-                                <label for="formGroupExampleInput" class="form-label">Descrição:</label>
-                                <input type="text" name="descricao" class="form-control" id="formGroupExampleInput" placeholder="">
+                                <label for="formGroupExampleInput" class="form-label">Conteúdo:</label>
+                                <input type="text" name="conteudo" class="form-control" id="formGroupExampleInput" placeholder="">
                             </div>
                             <input class="btn btn-success text-center" type="submit" value="Enviar">
 
@@ -42,5 +42,3 @@
     </div>
 </div>
 @endsection
-
-
