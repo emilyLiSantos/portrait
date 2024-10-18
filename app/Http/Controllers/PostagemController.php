@@ -32,12 +32,12 @@ class PostagemController extends Controller
     {
        $validated = $request->validate([
             'titulo' => 'required|min:5',
-            'descricao' => 'required|min:5',
+            'conteudo' => 'required|min:5',
        ]);
 
        $postagem = new postagem();
        $postagem->titulo = $request->titulo;
-       $postagem->descricao = $request->descricao;
+       $postagem->conteudo = $request->conteudo;
        $postagem->save();
 
        //dd($request->all());
@@ -76,7 +76,7 @@ class PostagemController extends Controller
 
         $postagem = postagem::find($id);
         $postagem->titulo = $request->titulo;
-        $postagem->descricao = $request->descricao;
+        $postagem->conteudo = $request->conteudo;
         $postagem->save();
 
         return redirect()->route('postagem.index')->with('mensagem', 'postagem alterada com sucesso');
