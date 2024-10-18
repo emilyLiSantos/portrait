@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Postagem;
+use App\Models\Categoria;
+use Illuminate\Support\Facades\Auth;
 
 class PostagemController extends Controller
 {
@@ -22,6 +24,8 @@ class PostagemController extends Controller
      */
     public function create()
     {
+        $categorias = Categoria::orderBy('nome', 'ASC')->get();
+
         return view('postagem.postagem_create');
     }
 
@@ -32,10 +36,13 @@ class PostagemController extends Controller
     {
        $validated = $request->validate([
             'titulo' => 'required|min:5',
+            'categoria_id' => 'required',
             'conteudo' => 'required|min:5',
        ]);
 
        $postagem = new postagem();
+       $postagem->categoria_id = $request->categoria_id;
+       $postagem->user_id = Auth::id();
        $postagem->titulo = $request->titulo;
        $postagem->conteudo = $request->conteudo;
        $postagem->save();
@@ -71,12 +78,17 @@ class PostagemController extends Controller
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([
-            'nome' => 'required|min:5',
+            'titulo' => 'required|min:5',
+            'categoria_id' => 'required',
+            'conteudo' => 'required|min:5',
        ]);
 
         $postagem = postagem::find($id);
+        $postagem->categoria_id = $request->categoria_id;
+        $postagem->user_id = Auth::id();
         $postagem->titulo = $request->titulo;
         $postagem->conteudo = $request->conteudo;
+        $postagem->user_id = Auth::id();
         $postagem->save();
 
         return redirect()->route('postagem.index')->with('mensagem', 'postagem alterada com sucesso');

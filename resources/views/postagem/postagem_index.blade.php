@@ -28,7 +28,6 @@
                             <tr>
                             <th>ID</th>
                             <th>Titulo</th>
-                            <th>Descrição</th>
                             <th>Ações</th>
                             </tr>
 
@@ -36,7 +35,6 @@
                             <tr>
                                 <td>{{ $value->id }}</td>
                                 <td>{{ $value->titulo }}</td>
-                                <td>{{ $value->descricao }}</td>
                                 <td class="d-flex justify-content-around">
                                     <a class="btn btn-primary" href="{{ url('/postagem/' . $value->id) }}" role="button">Visualizar</a>
                                     <a class="btn btn-warning" href="{{ url('/postagem/' . $value->id . '/edit') }}" role="button">Editar</a>

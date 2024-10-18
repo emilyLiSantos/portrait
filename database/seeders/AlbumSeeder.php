@@ -15,21 +15,21 @@ class AlbumSeeder extends Seeder
     {
         DB::table('albuns')->insert([
             'user_id' => 1,
-            'nome' => 'Titulo',
-            'descricao' => 'descrição 1',
+            'titulo' => 'Titulo',
+            'descricao' => 'descrição 1'
         ]);
 
         DB::table('albuns')->insert([
             'user_id' => 1,
-            'nome' => 'Tag',
+            'titulo' => 'Tag',
             'descricao' => 'descrição 2'
         ]);
 
         DB::table('albuns')->insert([
             'user_id' => 1,
-            'nome' => 'fotos',
+            'titulo' => 'fotos',
             'descricao' => 'descrição 3'
         ]);
-        
+
     }
 }
