@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Começo Categoria
 
-    Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
+    Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index')->middleware('auth');
 
     Route::get('/categoria/create', [CategoriaController::class, 'create'])->name('categoria.create');
 
