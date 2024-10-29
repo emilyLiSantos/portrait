@@ -26,7 +26,7 @@ class PostagemController extends Controller
     {
         $categorias = Categoria::orderBy('nome', 'ASC')->get();
 
-        return view('postagem.postagem_create');
+        return view('postagem.postagem_create', compact('categorias'));
     }
 
     /**
@@ -69,8 +69,9 @@ class PostagemController extends Controller
     public function edit(string $id)
     {
        //dd('edit: ' . $id);
+       $categorias = Categoria::orderBy('nome', 'ASC')->get();
        $postagem = postagem::find($id);
-       return view('postagem.postagem_edit', compact('postagem'));
+       return view('postagem.postagem_edit', compact('postagem', 'categorias'));
     }
     /**
      * Update the specified resource in storage.

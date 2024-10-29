@@ -9,7 +9,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -29,18 +29,24 @@
                     <form method='POST' action="{{ URL('/postagem') }}" style="margin: 15px">
                         @csrf
                             <div class="form-group">
-                                <label for="formGroupExampleInput" class="form-label">Nome do album:</label>
-                                <input type="text" name="nome" class="form-control" id="formGroupExampleInput" placeholder="">
+                                <label for="formGroupExampleInput" class="form-label">Título da Postagem:</label>
+                                <input type="text" name="titulo" class="form-control" id="formGroupExampleInput" placeholder="">
+
+                                <label for="categorias">Escolha uma categoria:</label><br>
+
+                                <select name="categoria_id">
+
+                                    @foreach ($categorias as $value)
+                                        <option value="{{ $value->id }}">{{ $value->nome }}</option>
+                                    @endforeach
+
+                                </select><br><br>
 
                                 <label for="formGroupExampleInput" class="form-label">Conteúdo:</label>
-                                <input type="text" name="conteudo" class="form-control" id="formGroupExampleInput" placeholder="">
-
                                 <textarea id="inp_editor1" class="form-control" name="conteudo" rows="4" cols="50"></textarea>
 
                             </div>
                             <input class="btn btn-success text-center" type="submit" value="Enviar">
-
-
 
                     </form>
 
