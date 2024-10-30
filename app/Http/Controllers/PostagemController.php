@@ -34,6 +34,8 @@ class PostagemController extends Controller
      */
     public function store(Request $request)
     {
+      dd(request->all());
+
        $validated = $request->validate([
             'titulo' => 'required|min:5',
             'categoria_id' => 'required',
@@ -78,6 +80,7 @@ class PostagemController extends Controller
      */
     public function update(Request $request, string $id)
     {
+
         $validated = $request->validate([
             'titulo' => 'required|min:5',
             'categoria_id' => 'required',
