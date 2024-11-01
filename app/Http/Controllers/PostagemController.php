@@ -34,10 +34,18 @@ class PostagemController extends Controller
      */
     public function store(Request $request)
     {
-      dd(request->all());
+
+      // 1 - pegar o conteudo do arquivo
+      $content = file_get_contents ($request->file('imagem'));
+
+
+
 
        $validated = $request->validate([
+            'imagem' => 'mimes:jpg,bmp,png',
             'titulo' => 'required|min:5',
+             // 2- validar o tipo do arquivo
+
             'categoria_id' => 'required',
             'conteudo' => 'required|min:5',
        ]);
@@ -45,6 +53,8 @@ class PostagemController extends Controller
        $postagem = new postagem();
        $postagem->categoria_id = $request->categoria_id;
        $postagem->user_id = Auth::id();
+       // 3- converter para base64
+       $postagem->imagem = base64_encode($content);
        $postagem->titulo = $request->titulo;
        $postagem->conteudo = $request->conteudo;
        $postagem->save();
