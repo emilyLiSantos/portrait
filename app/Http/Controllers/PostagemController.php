@@ -38,9 +38,6 @@ class PostagemController extends Controller
       // 1 - pegar o conteudo do arquivo
       $content = file_get_contents ($request->file('imagem'));
 
-
-
-
        $validated = $request->validate([
             'imagem' => 'mimes:jpg,bmp,png',
             'titulo' => 'required|min:5',

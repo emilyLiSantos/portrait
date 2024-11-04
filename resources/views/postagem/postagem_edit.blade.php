@@ -22,7 +22,7 @@
 
                         <div class="form-group">
                             <label for="formGroupExampleInput" class="form-label">Título da Postagem:</label>
-                            <input type="text" name="nome" value="{{ $postagem->titulo }}"  class="form-control" id="formGroupExampleInput" placeholder="">
+                            <input type="text" name="titulo" value="{{ $postagem->titulo }}"  class="form-control" id="formGroupExampleInput" placeholder="">
 
                             <label for="categorias">Escolha uma categoria:</label><br>
 

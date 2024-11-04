@@ -36,6 +36,7 @@ class AlbumController extends Controller
             'titulo' => 'required|min:5',
             'descricao' => 'required|min:5',
         ]);
+
          $album = new album();
          $album->titulo = $request->titulo;
          $album->descricao = $request->descricao;
@@ -75,6 +76,7 @@ class AlbumController extends Controller
             'titulo' => 'required|min:5',
             'descricao' => 'required|min:5',
         ]);
+
          $album = new album();
          $album->titulo = $request->titulo;
          $album->descricao = $request->descricao;

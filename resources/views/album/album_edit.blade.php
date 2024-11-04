@@ -15,8 +15,8 @@
                         @csrf
 
                         <div class="form-group">
-                            <label for="formGroupExampleInput" class="form-label">Nome do album:</label>
-                            <input type="text" name="nome" value="{{ $album->titulo }}"  class="form-control" id="formGroupExampleInput" placeholder="">
+                            <label for="formGroupExampleInput" class="form-label">Título do album:</label>
+                            <input type="text" name="titulo" value="{{ $album->titulo }}"  class="form-control" id="formGroupExampleInput" placeholder="">
 
                             <label for="formGroupExampleInput" class="form-label">Descrição:</label>
                             <input type="text" name="descricao" value="{{ $album->descricao }}" class="form-control" id="formGroupExampleInput" placeholder="">
@@ -33,3 +33,4 @@
     </div>
 </div>
 @endsection
+
