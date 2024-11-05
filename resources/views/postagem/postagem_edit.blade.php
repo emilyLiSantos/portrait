@@ -14,7 +14,7 @@
 
                 <div class="mb-3 card border-light text-center">
 
-                    <form class="form text-center" method='POST' action="{{ URL('/postagem/' . $postagem->id) }}" style="margin: 15px">
+                    <form class="form text-center" method='POST' action="{{ URL('/postagem/' . $postagem->id) }}" enctype="multipart/form-data" style="margin: 15px">
 
                         @method('PUT')
                         @csrf
