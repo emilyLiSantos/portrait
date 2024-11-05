@@ -34,6 +34,9 @@
 
                             </select><br><br>
 
+                            <label>Imagem</label>
+                            <input type="file" name="imagem" class="form-control">
+
                             <label for="formGroupExampleInput" class="form-label">Conteúdo:</label>
                             <textarea id="inp_editor1" class="form-control" name="conteudo" rows="4" cols="50">{{ $postagem->conteudo }}</textarea>
                          </div>
