@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Começo Categoria
 
-    Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
+    Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index')->middleware('auth');
 
     Route::get('/categoria/create', [CategoriaController::class, 'create'])->name('categoria.create');
 
@@ -65,8 +65,7 @@ Route::middleware(['auth'])->group(function () {
 
     // FIM DO ALBUM
 
-     // COMEÇO DO postagem
-
+    // COMEÇO DO postagem
 
      Route::get('/postagem', [PostagemController::class, 'index'])->name('postagem.index');
 
@@ -82,6 +81,6 @@ Route::middleware(['auth'])->group(function () {
 
      Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'])->name('postagem.destroy');
 
-     // FIM DO ALBUM
+    // FIM DO ALBUM
 });
 

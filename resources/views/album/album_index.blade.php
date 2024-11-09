@@ -27,7 +27,7 @@
                         <table>
                             <tr>
                             <th>ID</th>
-                            <th>Nome</th>
+                            <th>Título</th>
                             <th>Descrição</th>
                             <th>Ações</th>
                             </tr>
@@ -35,7 +35,7 @@
                             @foreach($albuns as $value)
                             <tr>
                                 <td>{{ $value->id }}</td>
-                                <td>{{ $value->nome }}</td>
+                                <td>{{ $value->titulo }}</td>
                                 <td>{{ $value->descricao }}</td>
                                 <td class="d-flex justify-content-around">
                                     <a class="btn btn-primary" href="{{ url('/album/' . $value->id) }}" role="button">Visualizar</a>

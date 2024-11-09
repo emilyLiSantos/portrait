@@ -13,7 +13,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        $albuns = Album::orderBy('nome', 'ASC')->get();
+        $albuns = Album::orderBy('titulo', 'ASC')->get();
         //dd($albuns);
         return view('album.album_index', compact('albuns'));
 
@@ -33,11 +33,12 @@ class AlbumController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'nome' => 'required|min:5',
+            'titulo' => 'required|min:5',
             'descricao' => 'required|min:5',
         ]);
+
          $album = new album();
-         $album->nome = $request->nome;
+         $album->titulo = $request->titulo;
          $album->descricao = $request->descricao;
          $album->user_id = Auth::id();
          $album->save();
@@ -72,11 +73,12 @@ class AlbumController extends Controller
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([
-            'nome' => 'required|min:5',
+            'titulo' => 'required|min:5',
             'descricao' => 'required|min:5',
         ]);
+
          $album = new album();
-         $album->nome = $request->nome;
+         $album->titulo = $request->titulo;
          $album->descricao = $request->descricao;
          $album->user_id = Auth::id();
          $album->save();

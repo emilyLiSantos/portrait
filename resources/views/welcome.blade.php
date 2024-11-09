@@ -8,7 +8,7 @@
         <div id="banner" class="box container">
             <div class="row">
                 <div class="col-7 col-12-medium">
-                    <h2>Hi. This is Verti.</h2>
+                    <h2>000</h2>
                     <p>It's a free responsive site template by HTML5 UP</p>
                 </div>
                 <div class="col-5 col-12-medium">
@@ -29,7 +29,7 @@
 
                     <!-- Box -->
                         <section class="box feature">
-                            <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+                            <a href="#" class="image featured"><img src="" alt="" /></a>
                             <div class="inner">
                                 <header>
                                     <h2>Put something here</h2>

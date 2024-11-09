@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Postagem;
+use App\Models\Categoria;
+use Illuminate\Support\Facades\Auth;
 
 class PostagemController extends Controller
 {
@@ -13,7 +15,7 @@ class PostagemController extends Controller
      */
     public function index()
     {
-        $postagens = Postagem::orderBy('nome', 'ASC')->get();
+        $postagens = Postagem::orderBy('titulo', 'ASC')->get();
         return view('postagem.postagem_index', compact('postagens'));
     }
 
@@ -22,7 +24,9 @@ class PostagemController extends Controller
      */
     public function create()
     {
-        return view('postagem.postagem_create');
+        $categorias = Categoria::orderBy('nome', 'ASC')->get();
+
+        return view('postagem.postagem_create', compact('categorias'));
     }
 
     /**
@@ -30,14 +34,26 @@ class PostagemController extends Controller
      */
     public function store(Request $request)
     {
+
+      // 1 - pegar o conteudo do arquivo
+      $content = file_get_contents ($request->file('imagem'));
+
        $validated = $request->validate([
-            'nome' => 'required|min:5',
-            'descricao' => 'required|min:5',
+            'imagem' => 'mimes:jpg,bmp,png',
+            'titulo' => 'required|min:5',
+             // 2- validar o tipo do arquivo
+
+            'categoria_id' => 'required',
+            'conteudo' => 'required|min:5',
        ]);
 
        $postagem = new postagem();
-       $postagem->nome = $request->nome;
-       $postagem->descricao = $request->descricao;
+       $postagem->categoria_id = $request->categoria_id;
+       $postagem->user_id = Auth::id();
+       // 3- converter para base64
+       $postagem->imagem = base64_encode($content);
+       $postagem->titulo = $request->titulo;
+       $postagem->conteudo = $request->conteudo;
        $postagem->save();
 
        //dd($request->all());
@@ -62,21 +78,36 @@ class PostagemController extends Controller
     public function edit(string $id)
     {
        //dd('edit: ' . $id);
+       $categorias = Categoria::orderBy('nome', 'ASC')->get();
        $postagem = postagem::find($id);
-       return view('postagem.postagem_edit', compact('postagem'));
+       return view('postagem.postagem_edit', compact('postagem', 'categorias'));
     }
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
+
+      // 1 - pegar o conteudo do arquivo
+      $content = file_get_contents ($request->file('imagem'));
+
+
         $validated = $request->validate([
-            'nome' => 'required|min:5',
+            'titulo' => 'required|min:5',
+            'categoria_id' => 'required',
+              // 2- validar o tipo do arquivo
+            'imagem' => 'mimes:jpg,bmp,png',
+            'conteudo' => 'required|min:5',
        ]);
 
         $postagem = postagem::find($id);
-        $postagem->nome = $request->nome;
-        $postagem->descricao = $request->descricao;
+        $postagem->categoria_id = $request->categoria_id;
+        $postagem->user_id = Auth::id();
+         // 3- converter para base64
+       $postagem->imagem = base64_encode($content);
+        $postagem->titulo = $request->titulo;
+        $postagem->conteudo = $request->conteudo;
+        $postagem->user_id = Auth::id();
         $postagem->save();
 
         return redirect()->route('postagem.index')->with('mensagem', 'postagem alterada com sucesso');
