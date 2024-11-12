@@ -2,24 +2,29 @@
 
 @section('content')
 
-<div id="page-wrapper">
-    <!-- Banner -->
-    <div id="banner-wrapper">
-        <div id="banner" class="box container">
-            <div class="row">
-                <div class="col-7 col-12-medium">
-                    <h2>000</h2>
-                    <p>It's a free responsive site template by HTML5 UP</p>
-                </div>
-                <div class="col-5 col-12-medium">
-                    <ul>
-                        <li><a href="#" class="button large icon solid fa-arrow-circle-right">Ok let's go</a></li>
-                        <li><a href="#" class="button alt large icon solid fa-question-circle">More info</a></li>
-                    </ul>
-                </div>
-            </div>
+<section class="carrossel1">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75" class="d-block w-100" alt="..." height="664" width="1429">
+          </div>
+          <div class="carousel-item">
+            <img src="https://designcomcafe.com.br/wp-content/uploads/2023/10/como-criar-prompts-para-geracao-de-imagens-com-ia-1024x538.jpg" class="d-block w-100" alt="..." height="664" width="1429">
+          </div>
+          <div class="carousel-item">
+            <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75" class="d-block w-100" alt="..." height="664" width="1429">
+          </div>
         </div>
-    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</section>
 
 <!-- Features -->
     <div id="features-wrapper">
@@ -114,5 +119,5 @@
             </div>
         </div>
     </div>
-</div>
+</div>/*
 @endsection
