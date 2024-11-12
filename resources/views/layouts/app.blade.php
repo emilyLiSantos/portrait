@@ -12,12 +12,12 @@
 		<link rel="stylesheet" href="{{  url('assets/css/main.css')  }}" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	</head>
-	<body class="is-preload homepage" style="background-color:rgb(255, 255, 255)">
+	<body class="is-preload homepage" style="background-color:rgb(0, 0, 0)">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 			<header>
-                <nav class="navbar navbar-expand-lg" style="background-color:black; padding-top: 20px; padding-bottom: 20px;">
+                <nav class="navbar navbar-expand-lg" style="background-color:black; padding-top: 30px;">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="#">
                         <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7qvJYXxJFO5Y8j-O5XBPLaLjdaqx_Fe1SNfSwnYzI-N6ouVS9" alt="logo" width="65" height="60">
@@ -61,32 +61,39 @@
 				</div>
 
 			<!-- Footer -->
-            <footer>
-                <div class="container text-center row" style="padding-bottom: 40px ">
-                    <div class="col-4 ">
-                        <section class="logo-footer">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7qvJYXxJFO5Y8j-O5XBPLaLjdaqx_Fe1SNfSwnYzI-N6ouVS9" alt="logo" width="150" height="150"></a>
-                                </li>
+            <footer class="rodape mt-5 mb-3">
+                <div class="container text-center">
+                    <div class="row p-5">
+                        <div class="col-md-3 mt-3">
+                            <a class="navbar-brand" href="#">
+                              <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7qvJYXxJFO5Y8j-O5XBPLaLjdaqx_Fe1SNfSwnYzI-N6ouVS9" alt="" width="150" height="140">
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h3 class="fs-6 ms-3" style="color:rgb(255, 255, 255)">INFORMAÇÕES</h3>
+                            <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link fw-lighter text-white" aria-current="page" href="index.html">Início</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link fw-lighter text-white" aria-current="page" href="vinil.html">Explorar</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link fw-lighter text-white" aria-current="page" href="cd.html">Sobre Nós</a>
+                              </li>
                             </ul>
-                        </section>
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                                <button type="button" class="btn" style="background-color:#FF0000; color:aliceblue">Entrar</button>
+                                <button type="button" class="btn" style="background-color:#FF0000; color:aliceblue">Crie Sua Conta</button>
+                        </div>
                     </div>
 
-                    <div class="col-4">
-                        <section class="widget contact last">
-                            <h3>Informações</h3>
-                            <ul>
-                                <li><a href="#" ><span class="label">Início</span></a></li>
-                                <li><a href="#" ><span class="label">Explorar</span></a></li>
-                                <li><a href="#"><span class="label">Sobre Nós</span></a></li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
             </footer>
 
-			</div>
+		</div>
 
 		<!-- Scripts -->
 
