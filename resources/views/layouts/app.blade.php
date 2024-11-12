@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="{{  url('assets/css/main.css')  }}" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	</head>
-	<body class="is-preload homepage">
+	<body class="is-preload homepage" style="background-color:rgb(255, 255, 255)">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -46,10 +46,9 @@
 			</header>
 
 			<!-- Main -->
-				<div id="main-wrapper">
-					<div class="container">
+				<div id="main-wrapper" style="margin-top: 0%">
+					<div class="">
 						<div class="">
-
 							<div class="">
 
 								<div class="container">
@@ -62,34 +61,30 @@
 				</div>
 
 			<!-- Footer -->
-				<div id="footer-wrapper">
-					<footer id="footer" class="container">
-						<div class="row">
-                            <div class="col-12 ">
-								<!-- Contact -->
-									<section class="widget contact last">
-										<h3>Contact Us</h3>
-										<ul>
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-										</ul>
-									</section>
-                            </div>
-						</div>
-						<div class="row">
-							<div class="col-12">
-								<div id="copyright">
-									<ul class="menu">
-										<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</footer>
-				</div>
+            <footer>
+                <div class="container text-center row" style="padding-bottom: 40px ">
+                    <div class="col-4 ">
+                        <section class="logo-footer">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7qvJYXxJFO5Y8j-O5XBPLaLjdaqx_Fe1SNfSwnYzI-N6ouVS9" alt="logo" width="150" height="150"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="col-4">
+                        <section class="widget contact last">
+                            <h3>Informações</h3>
+                            <ul>
+                                <li><a href="#" ><span class="label">Início</span></a></li>
+                                <li><a href="#" ><span class="label">Explorar</span></a></li>
+                                <li><a href="#"><span class="label">Sobre Nós</span></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </footer>
 
 			</div>
 
