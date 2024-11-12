@@ -34,12 +34,14 @@
 	// Nav.
 
 		// Toggle.
+        /*
 			$(
 				'<div id="navToggle">' +
 					'<a href="#navPanel" class="toggle"></a>' +
 				'</div>'
 			)
 				.appendTo($body);
+        */
 
 		// Panel.
 			$(
