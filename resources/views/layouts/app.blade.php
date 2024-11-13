@@ -86,7 +86,7 @@
                         </div>
 
                         <div class="col-md-3 mt-3">
-                                <button type="button" class="btn" style="background-color:#FF0000; color:aliceblue">Entrar</button>
+
                                 <button type="button" class="btn" style="background-color:#FF0000; color:aliceblue">Crie Sua Conta</button>
                         </div>
                     </div>

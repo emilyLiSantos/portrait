@@ -27,29 +27,29 @@
 </section>
 
 <!-- Features -->
-    <div id="features-wrapper">
+    <div id="features-wrapper"  style="background-color:rgba(52, 54, 156, 0.548); border-radius: 25px;" >
         <div class="container">
             <div class="row">
                 <div class="col-4 col-12-medium">
 
                     <!-- Box -->
-                        <section class="box feature">
+                        <section class="">
                             <a href="#" class="image featured"><img src="" alt="" /></a>
                             <div class="inner">
                                 <header>
-                                    <h2>Put something here</h2>
+                                    <h2 style="font-size: 28px;">Put something here</h2>
                                     <p>Maybe here as well I think</p>
                                 </header>
-                                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+
                             </div>
                         </section>
 
                 </div>
                 <div class="col-4 col-12-medium">
 
-                    <!-- Box -->
+                    <!-- Box
                         <section class="box feature">
-                            <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+                            <a href="#" class="image featured"><img src="https://services.meteored.com/img/article/inteligencia-artificial-aprende-a-reconstruir-imagens-vistas-por-pessoas-ciencia-fotos-1679175318563_1280.jpg" alt="" /></a>
                             <div class="inner">
                                 <header>
                                     <h2>An interesting title</h2>
@@ -57,21 +57,29 @@
                                 </header>
                                 <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
                             </div>
-                        </section>
+                        </section>-->
 
                 </div>
                 <div class="col-4 col-12-medium">
 
-                    <!-- Box -->
-                        <section class="box feature">
-                            <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-                            <div class="inner">
-                                <header>
-                                    <h2>Oh, and finally ...</h2>
-                                    <p>Here's another intriguing subtitle</p>
-                                </header>
-                                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-                            </div>
+                    <!-- Formulario-->
+                        <section class="">
+                            <form>
+                                <div class="mb-3">
+                                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                                  <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-3 form-check">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                              </form>
                         </section>
 
                 </div>
