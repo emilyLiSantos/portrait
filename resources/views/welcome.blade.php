@@ -26,6 +26,8 @@
       </div>
 </section>
 
+
+
 <!-- Features -->
     <div id="features-wrapper"  style="background-color:rgba(52, 54, 156, 0.548); border-radius: 25px;" >
         <div class="container">
@@ -45,21 +47,18 @@
                         </section>
 
                 </div>
+
                 <div class="col-4 col-12-medium">
 
-                    <!-- Box
+                    <!-- Box-->
                         <section class="box feature">
                             <a href="#" class="image featured"><img src="https://services.meteored.com/img/article/inteligencia-artificial-aprende-a-reconstruir-imagens-vistas-por-pessoas-ciencia-fotos-1679175318563_1280.jpg" alt="" /></a>
                             <div class="inner">
-                                <header>
-                                    <h2>An interesting title</h2>
-                                    <p>This is also an interesting subtitle</p>
-                                </header>
-                                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
                             </div>
-                        </section>-->
+                        </section>
 
                 </div>
+
                 <div class="col-4 col-12-medium">
 
                     <!-- Formulario-->

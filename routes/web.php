@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\PostagemController;
+use App\Http\Controllers\FeedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,10 @@ use App\Http\Controllers\PostagemController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
+
+Route::get('/', [FeedController::class, 'geral'])->name('welcome');
 
 Auth::routes();
 
