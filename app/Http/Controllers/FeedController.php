@@ -11,4 +11,5 @@ class FeedController extends Controller
         $postagens = Postagem::orderBy('id','DESC')->get();
         return view('welcome', compact('postagens'));
     }
+
 }

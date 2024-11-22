@@ -101,12 +101,32 @@
 
 
     <!--pagina 2-->
+<header>
+     @foreach ($postagens as $value)
+
+     <div class="title">
+         <h2><a href="#">{{ $value->titulo }}</a></h2>
+         <p> ANA LROLIVEIRA </p>
+     </div>
+     <div class="meta">
+          <time class="published" datetime="0000 0000"> {{ $value->created_at }}</time>
+          <a href="#" class="author"><span class="name">{{ $value->autor->name }} </span><img src="" alt="" /></a>
+     </div>
+
+</header>
+      <span class=""> <img src="data:image/png;base64, {{ $value->imagem }} " alt="imagem" width="500" height="500"/></span>
+      <p> {!! $value->conteudo !!} </p>
+
+     @endforeach
+
     <div class="custom-section">
+
+
         <div class="container">
             <div class="row align-items-center">
                 <!-- Imagem -->
                 <div class="col-md-6 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2023/01/19/10/24/phone-booth-7728783_1280.jpg"  class="img-fluid rounded" alt="Imagem">
+                    <img src=""  class="img-fluid rounded" alt="Imagem">
                 </div>
                 <!-- Coluna do texto -->
                 <div class="col-md-6">
@@ -115,9 +135,11 @@
                         A melhor parte do Portrait.
                     </p>
                    <a class="nav-item"><a class="btn btn-danger ms-2" href="#" style="color:#fff">Explorar</a>
+
                 </div>
             </div>
         </div>
+
     </div>
 
 
@@ -159,4 +181,8 @@
         </div>
     </div>
 </div>
+
+
 @endsection
+
+
