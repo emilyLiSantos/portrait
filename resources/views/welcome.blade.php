@@ -1,78 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
+<header>
+    @foreach ($postagens as $value)
 
-<!--<section class="carrossel1">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75" class="d-block w-100" alt="..." height="664" width="1429">
-          </div>
-          <div class="carousel-item">
-            <img src="https://designcomcafe.com.br/wp-content/uploads/2023/10/como-criar-prompts-para-geracao-de-imagens-com-ia-1024x538.jpg" class="d-block w-100" alt="..." height="664" width="1429">
-          </div>
-          <div class="carousel-item">
-            <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75" class="d-block w-100" alt="..." height="664" width="1429">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>-->
-</section>
-   <!--Features
+    <div class="title">
+        <h2><a href="#">{{ $value->titulo }}</a></h2>
+        <p> ANA LROLIVEIRA </p>
+    </div>
+    <div class="meta">
+         <time class="published" datetime="0000 0000"> {{ $value->created_at }}</time>
+         <a href="#" class="author"><span class="name">{{ $value->autor->name }} </span><img src="" alt="" /></a>
+    </div>
+
+</header>
+     <span class=""> <img src="data:image/png;base64, {{ $value->imagem }} " alt="imagem" width="500" height="500"/></span>
+     <p> {!! $value->conteudo !!} </p>
+
+    @endforeach
+   <!--Features-->
   <div id="features-wrapper "  style="background-color:rgba(52, 54, 156, 0.548); border-radius: 25px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-12-medium">
-
-                    Box
-                        <section style="text-align: center; padding:35px;">
-                            <a href="#" class="image featured"><img src="" alt="" /></a>
-                            <div class="inner">
-                                <header>
-                                    <h2 style="font-size: 48px;">Cadastre-se</h2>
-                                    <p style="font-size: 30px;">tenha novas ideias</p>
-                                </header>
-
-                            </div>
-                        </section>
-
-                </div>-->
-
-                 <!-- <div class="col-4 col-12-medium">
-
-                   Box
-
-
-                </div>
-
-                <div class="col-4 col-12-medium">-->
-
-                    <!-- Formulario
-                        <section class="">
-                            <form>
-                                <div class="mb-3">
-                                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                                </div>
-                                <div class="mb-3">
-                                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                                  <input type="password" class="form-control" id="exampleInputPassword1">
-                                </div>
-                                <div class="mb-3 form-check">
-                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
-                              </form>
-                        </section>-->
 
                 </div>
             </div>
@@ -101,23 +48,7 @@
 
 
     <!--pagina 2-->
-<header>
-     @foreach ($postagens as $value)
 
-     <div class="title">
-         <h2><a href="#">{{ $value->titulo }}</a></h2>
-         <p> ANA LROLIVEIRA </p>
-     </div>
-     <div class="meta">
-          <time class="published" datetime="0000 0000"> {{ $value->created_at }}</time>
-          <a href="#" class="author"><span class="name">{{ $value->autor->name }} </span><img src="" alt="" /></a>
-     </div>
-
-</header>
-      <span class=""> <img src="data:image/png;base64, {{ $value->imagem }} " alt="imagem" width="500" height="500"/></span>
-      <p> {!! $value->conteudo !!} </p>
-
-     @endforeach
 
     <div class="custom-section">
 

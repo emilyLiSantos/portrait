@@ -121,6 +121,7 @@
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item"><a class="nav-link" href="#" style="color:#fff">Sobre</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#" style="color:#fff">Explorar</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{  url('/feed/categoria')}}" style="color:#fff">Categorias</a></li>
                                 <li class="nav-item"><a class="btn btn-danger ms-2" href="#" style="color:#fff">Entrar</a></li>
                                 <li class="nav-item"><a class="btn btn-danger ms-2" href="#" style="color:#fff">Criar Conta</a></li>
                             </ul>

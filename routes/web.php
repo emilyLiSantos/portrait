@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get('/', [FeedController::class, 'geral'])->name('welcome');
 
-Route::get('/feed/categoria' , [FeedController::class, 'ctegoria'])->name('feed.categoria');
+Route::get('/feed/categoria' , [FeedController::class, 'categoria'])->name('feed.categoria');
 
 Auth::routes();
 
