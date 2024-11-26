@@ -38,7 +38,7 @@
 <style>
     /* Pagina 3*/
     .background-imagen {
-        background-image: url('https://cdn.pixabay.com/photo/2023/08/23/15/44/ai-generated-8208847_1280.png');
+        background-image: url('https://img.freepik.com/fotos-gratis/ilustracao-de-passaro-de-fantasia_23-2151496100.jpg?t=st=1732463484~exp=1732467084~hmac=d1a9af9a5da236df3e6386650c030d4b27dcb8bae2aafb86a0a0296941721c79&w=1380');
         background-size: cover;
         background-position: center;
         position: relative;
@@ -90,7 +90,7 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item"><a class="nav-link" href="#" style="color:#fff">Sobre</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#" style="color:#fff">Explorar</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{  url('/feed/autor') }}" style="color:#fff">Autores</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{  url('/feed/categoria') }}" style="color:#fff">Categorias</a></li>
                                 <li class="nav-item"><a class="btn btn-danger ms-2" href="{{ url('/login') }}" style="color:#fff">Entrar</a></li>
                                 <li class="nav-item"><a class="btn btn-danger ms-2" href="#" style="color:#fff">Criar Conta</a></li>
