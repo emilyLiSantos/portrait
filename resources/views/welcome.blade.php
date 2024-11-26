@@ -1,23 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-<header>
-    @foreach ($postagens as $value)
+    <section>
 
-    <div class="title">
-        <h2><a href="#">{{ $value->titulo }}</a></h2>
-        <p> ANA LROLIVEIRA </p>
-    </div>
-    <div class="meta">
-         <time class="published" datetime="0000 0000"> {{ $value->created_at }}</time>
-         <a href="#" class="author"><span class="name">{{ $value->autor->name }} </span><img src="" alt="" /></a>
-    </div>
+        <div class="container">
+            <div class="row row-cols-4">
+                @foreach ($postagens as $value)
+                <div class="col">
+                    <h3>{{ $value->autor->name }}</h3>
+                    <div class="postagem">
+                        <img src="data:image/png;base64, {{ $value->imagem }} " class="card-img-top"  width="250" height="250" alt="imagem"/>
+                    </div>
+                    <div>
+                        <h5>{{ $value->titulo }}</h5>
+                        <p class="card-text">{!! $value->autor->name !!}</p>
+                        <time class="published">{{ $value->created_at }}</time>
+                    </div>
+                </div>
+                @endforeach
 
-</header>
-     <span class=""> <img src="data:image/png;base64, {{ $value->imagem }} " alt="imagem" width="500" height="500"/></span>
-     <p> {!! $value->conteudo !!} </p>
+            </div>
+        </div>
 
-    @endforeach
+    </section>
+
+
    <!--Features-->
   <div id="features-wrapper "  style="background-color:rgba(52, 54, 156, 0.548); border-radius: 25px;">
 

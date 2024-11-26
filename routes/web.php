@@ -22,9 +22,10 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('/', [FeedController::class, 'geral'])->name('welcome');
+Route::get('/', [FeedController::class, 'welcome'])->name('welcome');
 
 Route::get('/feed/categoria' , [FeedController::class, 'categoria'])->name('feed.categoria');
+
 
 Auth::routes();
 

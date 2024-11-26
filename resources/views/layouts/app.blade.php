@@ -77,36 +77,6 @@
 	<body class="is-preload homepage">
 		<div id="page-wrapper">
 
-
-
-
-               <!-- <nav class="navbar navbar-expand-lg" style="background-color:black; padding-top: 30px;">
-                    <div class="container-fluid">
-                      <a class="navbar-brand" href="#">
-                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7qvJYXxJFO5Y8j-O5XBPLaLjdaqx_Fe1SNfSwnYzI-N6ouVS9" alt="logo" width="65" height="60">
-                      </a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                          <li class="nav-item">
-                            <a class="nav-link" style="color:rgb(255, 255, 255)" aria-current="page" href="#">Sobre</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" style="color:rgb(255, 255, 255)" href="#">Explorar</a>
-                          </li>
-                        </ul>
-                      </div>
-
-                    <div class="">
-                    <button type="button" class="btn" style="background-color:#FF0000; color:aliceblue">Entrar</button>
-                    <button type="button" class="btn" style="background-color:#FF0000; color:aliceblue">Crie Sua Conta</button>
-                    </div>
-
-                    </div>
-                </nav>-->
-
          <!--Nabar-->
                 <nav class="navbar navbar-expand-lg border-bottom" style="background-color:black; padding-top: 30px;">
                     <div class="container-fluid" >
@@ -121,8 +91,8 @@
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item"><a class="nav-link" href="#" style="color:#fff">Sobre</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#" style="color:#fff">Explorar</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{  url('/feed/categoria')}}" style="color:#fff">Categorias</a></li>
-                                <li class="nav-item"><a class="btn btn-danger ms-2" href="#" style="color:#fff">Entrar</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{  url('/feed/categoria') }}" style="color:#fff">Categorias</a></li>
+                                <li class="nav-item"><a class="btn btn-danger ms-2" href="{{ url('/login') }}" style="color:#fff">Entrar</a></li>
                                 <li class="nav-item"><a class="btn btn-danger ms-2" href="#" style="color:#fff">Criar Conta</a></li>
                             </ul>
                         </div>

@@ -1,16 +1,13 @@
 @extends('layouts.app')
 
-
-
 @section('content')
+
 
 @foreach ($categorias as $value)
 
-<p><strong>{{ $value->name }}</strong> </p>
+<p><strong><a href="{{ url('/feed/categoria/' . $value->id) }}">{{ $value->nome }}</strong> </p>
 
 @endforeach
-
-
 
 
 @endsection

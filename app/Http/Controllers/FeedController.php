@@ -9,7 +9,7 @@ use App\Models\Categoria;
 
 class FeedController extends Controller
 {
-    public function geral(){
+    public function welcome(){
         $postagens = Postagem::orderBy('id','DESC')->get();
         return view('welcome', compact('postagens'));
     }
