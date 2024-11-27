@@ -14,6 +14,12 @@
                         </div>
                     @endif
 
+                            @can('is_admin')
+                            <p>Parabens voce e um administrador</p>
+                            @else
+                            <p>Parabens voce e um usuario normal</p>
+                            @endcan
+
                     {{ __('You are logged in!') }}
                 </div>
             </div>
