@@ -16,8 +16,10 @@ class PostagemController extends Controller
     public function index()
     {
 
-        $user_id = Auth :: id();
+        $user_id = Auth::id();
+
         $postagens = Postagem::where('user_id', $user_id)->orderBy('titulo', 'ASC')->get();
+        //dd($postagens);
         return view('postagem.postagem_index', compact('postagens'));
     }
 
@@ -82,7 +84,15 @@ class PostagemController extends Controller
      */
     public function edit(string $id)
     {
+        // verificar se o usuario pode editar esta postagem
        //dd('edit: ' . $id);
+       $user_id = Auth::id();
+       $ehDoUsuario = Postagem::where('id' , $id)->where('user_id' , $user_id)->exists();
+       if(!$ehDoUsuario){
+            return redirect()->route('postagem.index')->with('mensagem', 'Você não tem permissão para alterar!!');
+       }
+
+       //dd('recreated');
        $categorias = Categoria::orderBy('nome', 'ASC')->get();
        $postagem = postagem::find($id);
        return view('postagem.postagem_edit', compact('postagem', 'categorias'));
@@ -92,6 +102,13 @@ class PostagemController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        // verificar se o usuario pode editar esta postagem
+        //dd('edit: ' . $id);
+       $user_id = Auth :: id();
+       $ehDoUsuario = Postagem::where('id' , $id)->where('user_id' , $user_id)->exists();
+       if(!$ehDoUsuario){
+            return redirect()->route('postagem.index')->with('mensagem', 'Você não tem permissão para alterar');
+       }
 
       // 1 - pegar o conteudo do arquivo
 
@@ -101,7 +118,6 @@ class PostagemController extends Controller
             'titulo' => 'required|min:5',
             'categoria_id' => 'required',
               // 2- validar o tipo do arquivo
-
             'conteudo' => 'required|min:5',
        ]);
 
